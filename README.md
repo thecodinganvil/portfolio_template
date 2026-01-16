@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Template
 
-## Getting Started
+A clean, modern portfolio template built with Next.js. Ready to customize with your own content.
 
-First, run the development server:
+## 🚀 Getting Started
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 How to Customize
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Personal Information
 
-## Learn More
+Update these files with your details:
 
-To learn more about Next.js, take a look at the following resources:
+**`src/app/layout.tsx`**
+- Change the title, description, and author name
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**`src/components/sections/Home.tsx`**
+- Update your name and role/tagline
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**`src/components/sections/About.tsx`**
+- Replace the placeholder photo with your image
+- Update name, nationality, languages
+- Update contact details (address, phone, email, LinkedIn)
+- Modify skills array with your skills
+- Update timeline with your experience and education
 
-## Deploy on Vercel
+**`src/components/sections/Contact.tsx`**
+- Update phone, address, email
+- Add your social media links
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. Portfolio Projects
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**`src/components/sections/Portfolio.tsx`**
+- Add your project images to `/public/assets/portfolio/`
+- Update the `portfolioItems` array with your projects
+
+### 3. Testimonials
+
+**`src/components/sections/Testimonials.tsx`**
+- Add real testimonials from your clients
+
+### 4. Stats/Facts
+
+**`src/components/sections/Facts.tsx`**
+- Update the numbers to reflect your experience
+
+### 5. Profile Photo
+
+Replace the placeholder in `About.tsx` with an actual image:
+```tsx
+<img className="my-photo" src="/assets/about.jpg" alt="Your Name" />
+```
+
+### 6. Color Theme
+
+Change the color theme in `layout.tsx`:
+```html
+<link id="color-skin-link" rel="stylesheet" href="/css/skins/yellow.css" />
+```
+
+Available themes in `/public/css/skins/`:
+- yellow.css
+- blue.css
+- green.css
+- red.css
+- purple.css
+
+## 📁 Project Structure
+
+```
+├── public/
+│   ├── assets/           # Your images
+│   └── css/              # Template CSS
+├── src/
+│   ├── app/              # Next.js app
+│   ├── components/
+│   │   └── sections/     # Page sections to customize
+│   └── lib/              # Utilities
+```
+
+## 🚀 Deploy
+
+Deploy easily on [Vercel](https://vercel.com/):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+---
+
+Made with Next.js

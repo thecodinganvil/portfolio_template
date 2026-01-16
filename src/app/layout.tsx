@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
-import "./premium.css";
 
 export const metadata: Metadata = {
-  title: "Sanjay Jaiswal | UI/UX Designer",
-  description: "Premium UI/UX & Visual Designer Portfolio - Creating stunning digital experiences",
-  keywords: ["UI/UX Designer", "Visual Designer", "Portfolio", "Product Designer", "India"],
-  authors: [{ name: "Sanjay Jaiswal" }],
+  title: "Portfolio Template | Developer & Designer",
+  description: "A modern portfolio template for developers and designers",
+  keywords: ["Portfolio", "Template", "Developer", "Designer", "Creative"],
+  authors: [{ name: "Your Name" }],
   openGraph: {
-    title: "Sanjay Jaiswal | UI/UX Designer",
-    description: "Premium UI/UX & Visual Designer Portfolio",
+    title: "Portfolio Template",
+    description: "A modern portfolio template for developers and designers",
     type: "website",
   },
 };
