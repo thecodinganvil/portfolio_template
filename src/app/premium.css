@@ -1,0 +1,632 @@
+/* ============================================
+   🔥 ULTRA PREMIUM PORTFOLIO OVERRIDES 🔥
+   This file uses !important to override ALL styles
+   ============================================ */
+
+/* ============================================
+   GLOBAL ULTRA PREMIUM EFFECTS
+   ============================================ */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffcc00, #ff6b6b) !important;
+  border-radius: 10px !important;
+  border: 2px solid #0a0a0a !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #fff, #ffcc00) !important;
+}
+
+/* Selection */
+::selection {
+  background: #ffcc00 !important;
+  color: #000 !important;
+}
+
+/* ============================================
+   BACKGROUND ENHANCEMENT
+   ============================================ */
+body {
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(255, 204, 0, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(255, 107, 107, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(132, 94, 247, 0.02) 0%, transparent 70%),
+    #0a0a0a !important;
+}
+
+/* ============================================
+   GLOWING BORDERS & OUTLINES
+   ============================================ */
+.page-content {
+  position: relative !important;
+}
+
+.page-content::before {
+  content: "" !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  border: 2px solid rgba(255, 204, 0, 0.1) !important;
+  pointer-events: none !important;
+  z-index: 9997 !important;
+  animation: borderPulse 4s ease-in-out infinite !important;
+}
+
+@keyframes borderPulse {
+  0%, 100% { border-color: rgba(255, 204, 0, 0.1); }
+  50% { border-color: rgba(255, 204, 0, 0.3); }
+}
+
+/* ============================================
+   HEADER ULTRA PREMIUM
+   ============================================ */
+.header-inner {
+  background: rgba(10, 10, 10, 0.8) !important;
+  backdrop-filter: blur(30px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0 0 30px 30px !important;
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.menu ul li span {
+  position: relative !important;
+  padding: 12px 24px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.menu ul li span::before {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 5px !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, #ffcc00, transparent) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transform: translateX(-50%) !important;
+}
+
+.menu ul li span:hover::before,
+.menu ul li span.active::before {
+  width: 80% !important;
+}
+
+.menu ul li span:hover,
+.menu ul li span.active {
+  color: #ffcc00 !important;
+  text-shadow: 0 0 30px rgba(255, 204, 0, 0.5) !important;
+}
+
+/* ============================================
+   HOME SECTION ULTRA PREMIUM
+   ============================================ */
+.home h1 {
+  font-size: clamp(60px, 12vw, 150px) !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -3px !important;
+}
+
+.home h1 span span {
+  display: inline-block !important;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+}
+
+/* Animated gradient text for intro */
+.home .intro {
+  background: linear-gradient(90deg, #ffcc00, #ff6b6b, #845ef7, #20c997, #ffcc00) !important;
+  background-size: 300% auto !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: gradientFlow 5s linear infinite !important;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
+
+/* CTA Button */
+.cta {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.cta::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: -5px !important;
+  background: conic-gradient(from 0deg, #ffcc00, #ff6b6b, #845ef7, #20c997, #ffcc00) !important;
+  border-radius: 50% !important;
+  animation: rotateBorder 3s linear infinite !important;
+  z-index: -1 !important;
+  filter: blur(8px) !important;
+  opacity: 0.7 !important;
+}
+
+@keyframes rotateBorder {
+  100% { transform: rotate(360deg); }
+}
+
+/* ============================================
+   ABOUT SECTION ULTRA PREMIUM
+   ============================================ */
+.about h2 {
+  font-size: clamp(50px, 8vw, 100px) !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+}
+
+.about h2 span:last-child {
+  background: linear-gradient(135deg, #ffcc00, #ff6b6b) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.my-photo {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease !important;
+  filter: grayscale(0%) !important;
+}
+
+.my-photo:hover {
+  transform: scale(1.05) !important;
+  filter: grayscale(0%) brightness(1.1) !important;
+}
+
+/* Skills Cards */
+.skills-content > div > div {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 20px !important;
+  padding: 30px !important;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.skills-content > div > div::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent) !important;
+  transition: 0.6s !important;
+}
+
+.skills-content > div > div:hover::before {
+  left: 100% !important;
+}
+
+.skills-content > div > div:hover {
+  transform: translateY(-15px) scale(1.05) !important;
+  background: rgba(255, 204, 0, 0.05) !important;
+  border-color: rgba(255, 204, 0, 0.3) !important;
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(255, 204, 0, 0.1) !important;
+}
+
+.skills-content > div > div:hover span {
+  background: linear-gradient(135deg, #ffcc00, #ff6b6b) !important;
+  box-shadow: 0 10px 30px rgba(255, 204, 0, 0.3) !important;
+}
+
+.skills-content > div > div:hover span i {
+  color: #000 !important;
+}
+
+/* Timeline */
+.timeline li > div {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-left: 3px solid #ffcc00 !important;
+  border-radius: 0 16px 16px 0 !important;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.timeline li > div:hover {
+  transform: translateX(20px) !important;
+  background: rgba(255, 204, 0, 0.05) !important;
+  border-color: rgba(255, 204, 0, 0.2) !important;
+  border-left-color: #ff6b6b !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ============================================
+   FACTS SECTION ULTRA PREMIUM
+   ============================================ */
+.facts > div > div {
+  background: rgba(255, 255, 255, 0.01) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 30px !important;
+  padding: 40px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.facts > div > div::before {
+  content: "" !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -50% !important;
+  width: 200% !important;
+  height: 200% !important;
+  background: conic-gradient(from 0deg, transparent, rgba(255, 204, 0, 0.1), transparent 30%) !important;
+  animation: rotateBg 6s linear infinite !important;
+  opacity: 0 !important;
+  transition: opacity 0.5s ease !important;
+}
+
+.facts > div > div:hover::before {
+  opacity: 1 !important;
+}
+
+@keyframes rotateBg {
+  100% { transform: rotate(360deg); }
+}
+
+.facts > div > div:hover {
+  transform: translateY(-10px) scale(1.05) !important;
+  border-color: rgba(255, 204, 0, 0.3) !important;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3) !important;
+}
+
+.facts h3 {
+  font-size: clamp(50px, 8vw, 80px) !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #ffcc00, #fff) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  transition: all 0.3s ease !important;
+}
+
+.facts > div > div:hover h3 {
+  text-shadow: 0 0 60px rgba(255, 204, 0, 0.5) !important;
+  filter: drop-shadow(0 0 20px rgba(255, 204, 0, 0.5)) !important;
+}
+
+/* ============================================
+   PORTFOLIO SECTION ULTRA PREMIUM
+   ============================================ */
+.portfolio .custom-title h3 span span span {
+  background: linear-gradient(135deg, #fff, #ffcc00) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.single-item {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.single-item:hover {
+  transform: translateY(-20px) !important;
+}
+
+.single-item .main-content {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.single-item .main-content::after {
+  content: "VIEW PROJECT" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(135deg, rgba(255, 204, 0, 0.9), rgba(255, 107, 107, 0.9)) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px !important;
+  color: #000 !important;
+  opacity: 0 !important;
+  transition: opacity 0.4s ease !important;
+}
+
+.single-item:hover .main-content::after {
+  opacity: 1 !important;
+}
+
+.single-item .main-content img {
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.single-item:hover .main-content img {
+  transform: scale(1.2) !important;
+}
+
+.single-item .details {
+  background: rgba(255, 255, 255, 0.02) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 20px !important;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.single-item:hover .details {
+  background: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Custom Button */
+.custom-btn {
+  background: linear-gradient(135deg, #ffcc00, #ff6b6b) !important;
+  border: none !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  border-radius: 50px !important;
+  padding: 15px 35px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 10px 30px rgba(255, 204, 0, 0.3) !important;
+}
+
+.custom-btn span {
+  color: #000 !important;
+}
+
+.custom-btn::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent) !important;
+  transition: 0.5s !important;
+}
+
+.custom-btn:hover::before {
+  left: 100% !important;
+}
+
+.custom-btn:hover {
+  transform: translateY(-5px) scale(1.05) !important;
+  box-shadow: 0 20px 40px rgba(255, 204, 0, 0.5) !important;
+}
+
+/* ============================================
+   TESTIMONIALS ULTRA PREMIUM
+   ============================================ */
+.quote-container {
+  background: rgba(255, 255, 255, 0.02) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 30px !important;
+  padding: 40px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.quote-container::before {
+  content: '"' !important;
+  position: absolute !important;
+  top: 20px !important;
+  right: 30px !important;
+  font-size: 120px !important;
+  font-family: Georgia, serif !important;
+  opacity: 0.05 !important;
+  color: #ffcc00 !important;
+  line-height: 1 !important;
+}
+
+.quote-container::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, #ffcc00, #ff6b6b, #845ef7) !important;
+  transform: scaleX(0) !important;
+  transform-origin: left !important;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.quote-container:hover::after {
+  transform: scaleX(1) !important;
+}
+
+.quote-container:hover {
+  transform: translateY(-15px) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ============================================
+   CONTACT ULTRA PREMIUM
+   ============================================ */
+.contact .boxes > div > div {
+  background: rgba(255, 255, 255, 0.02) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 24px !important;
+  padding: 30px !important;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.contact .boxes > div > div:hover {
+  transform: translateY(-15px) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3) !important;
+}
+
+.contact .boxes > div > div i {
+  width: 70px !important;
+  height: 70px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #ffcc00, #ff6b6b) !important;
+  border-radius: 20px !important;
+  font-size: 28px !important;
+  color: #000 !important;
+  margin-bottom: 20px !important;
+  transition: all 0.4s ease !important;
+}
+
+.contact .boxes > div > div:hover i {
+  transform: scale(1.1) rotate(10deg) !important;
+  box-shadow: 0 15px 30px rgba(255, 204, 0, 0.4) !important;
+}
+
+/* Social Icons */
+.contact .social li a {
+  width: 55px !important;
+  height: 55px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 50% !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.contact .social li a:hover {
+  background: linear-gradient(135deg, #ffcc00, #ff6b6b) !important;
+  border-color: transparent !important;
+  transform: translateY(-10px) scale(1.1) !important;
+  box-shadow: 0 20px 40px rgba(255, 204, 0, 0.4) !important;
+}
+
+.contact .social li a:hover i {
+  color: #000 !important;
+}
+
+/* ============================================
+   SEPARATORS
+   ============================================ */
+.separator,
+.opposite-separator {
+  opacity: 0.3 !important;
+  filter: drop-shadow(0 0 10px rgba(255, 204, 0, 0.3)) !important;
+}
+
+/* ============================================
+   SWITCHER ENHANCEMENT
+   ============================================ */
+#switcher {
+  background: rgba(10, 10, 10, 0.95) !important;
+  backdrop-filter: blur(30px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 10px 0 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+#showSwitcher {
+  box-shadow: 0 10px 30px rgba(255, 204, 0, 0.5) !important;
+  transition: all 0.3s ease !important;
+}
+
+#showSwitcher:hover {
+  transform: translateX(5px) scale(1.1) !important;
+  box-shadow: 0 15px 40px rgba(255, 204, 0, 0.7) !important;
+}
+
+/* ============================================
+   SCROLL PROGRESS BAR
+   ============================================ */
+.scroll-progress {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, #ffcc00, #ff6b6b, #845ef7) !important;
+  z-index: 99999 !important;
+  transform-origin: left !important;
+}
+
+/* ============================================
+   MOBILE OPTIMIZATIONS
+   ============================================ */
+@media (max-width: 1024px) {
+  .facts > div > div,
+  .skills-content > div > div,
+  .quote-container,
+  .contact .boxes > div > div {
+    padding: 25px !important;
+  }
+  
+  .home h1 {
+    font-size: clamp(40px, 10vw, 80px) !important;
+  }
+}
+
+/* ============================================
+   NOISE OVERLAY
+   ============================================ */
+.noise-overlay {
+  position: fixed !important;
+  top: -50% !important;
+  left: -50% !important;
+  width: 200% !important;
+  height: 200% !important;
+  pointer-events: none !important;
+  z-index: 99998 !important;
+  opacity: 0.015 !important;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
+  animation: noiseAnimation 0.2s steps(10) infinite !important;
+}
+
+@keyframes noiseAnimation {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-2%, -2%); }
+  20% { transform: translate(2%, 2%); }
+  30% { transform: translate(-2%, 2%); }
+  40% { transform: translate(2%, -2%); }
+  50% { transform: translate(-2%, -2%); }
+  60% { transform: translate(2%, 2%); }
+  70% { transform: translate(-2%, 2%); }
+  80% { transform: translate(2%, -2%); }
+  90% { transform: translate(-2%, -2%); }
+}
+
+/* ============================================
+   PARALLAX FLOATING ELEMENTS
+   ============================================ */
+.floating-orb {
+  position: fixed !important;
+  border-radius: 50% !important;
+  pointer-events: none !important;
+  filter: blur(60px) !important;
+  animation: floatOrb 20s ease-in-out infinite !important;
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(50px, -30px) scale(1.1); }
+  50% { transform: translate(-30px, 50px) scale(0.9); }
+  75% { transform: translate(-50px, -20px) scale(1.05); }
+}
